@@ -14,7 +14,14 @@ It contains:
 - `output_dir`: where to save the summary markdown file
 - `git_author`: git author name or email to filter commits by
 
-If the file does not exist or any field is missing or still has placeholder values (e.g. "Your Name or email"), stop and ask the user to fill in the missing values. Offer to update the config file for them.
+If the file does not exist, create it from the example config at the skill's repo (`daily-summary-config.example.json`) and then ask the user to provide values for each field. Offer to update the config file for them.
+
+Validate every field:
+- `scan_paths`: each entry must look like a plausible directory path (starts with `~/`, `/`, or `.`). Expand `~` and verify the directories exist using `ls`. Drop any that don't exist and warn the user. If none are valid, ask the user which directories to scan.
+- `output_dir`: must look like a plausible directory path (starts with `~/`, `/`, or `.`). If it doesn't (e.g. contains comments, random text, or is clearly not a path), ask the user for a valid directory. If the directory doesn't exist yet, that's fine — it will be created later.
+- `git_author`: must not be empty or still have the placeholder value "Your Name or email". If invalid, try to auto-detect by running `git config user.name` and `git config user.email`, propose the detected values, and ask the user to confirm.
+
+If any field is missing, empty, or invalid, stop and ask the user to provide correct values. Offer to update the config file for them. Do NOT proceed to Step 2 until all fields are valid.
 
 If the user asks to change a setting (e.g. "use ~/work instead" or "change my name to X"), update the config file accordingly before proceeding.
 
