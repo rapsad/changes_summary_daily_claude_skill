@@ -1,0 +1,8 @@
+{
+  "scan_paths": [
+    "~/projects",
+    "~/work"
+  ],
+  "output_dir": "~/dev-summaries",
+  "git_author": "Your Name or email"
+}
