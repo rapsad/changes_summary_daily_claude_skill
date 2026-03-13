@@ -1,3 +1,8 @@
+---
+name: daily-summary
+description: Generate a daily development summary from local git repositories. Scans for commits, analyzes changes, extracts architectural decisions, and creates Anki cards. Use when you want a summary of today's coding work.
+---
+
 You are helping the user generate a daily development summary from their local git repositories.
 
 ## Step 1 — Load config

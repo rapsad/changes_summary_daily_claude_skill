@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-SKILLS_DIR="$HOME/.claude/skills"
+SKILLS_DIR="$HOME/.claude/skills/daily-summary"
 CONFIG_FILE="$HOME/.claude/daily-summary-config.json"
 SKILL_FILE="daily-summary.md"
 REPO_URL="https://raw.githubusercontent.com/rapsad/changes_summary_daily_claude_skill/main"
@@ -22,8 +22,8 @@ else
 fi
 
 mkdir -p "$SKILLS_DIR"
-cp "$SKILL_SOURCE" "$SKILLS_DIR/daily-summary.md"
-echo "✓ Skill installed to $SKILLS_DIR/daily-summary.md"
+cp "$SKILL_SOURCE" "$SKILLS_DIR/SKILL.md"
+echo "✓ Skill installed to $SKILLS_DIR/SKILL.md"
 
 # --- Config setup ---
 
