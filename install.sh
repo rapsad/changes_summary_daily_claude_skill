@@ -4,7 +4,7 @@ set -e
 SKILLS_DIR="$HOME/.claude/skills"
 CONFIG_FILE="$HOME/.claude/daily-summary-config.json"
 SKILL_FILE="daily-summary.md"
-REPO_URL="https://raw.githubusercontent.com/rapsad/changes_summary_daily_claude_skill/refs/heads/main"
+REPO_URL="https://raw.githubusercontent.com/rapsad/changes_summary_daily_claude_skill/main"
 
 echo ""
 echo "=== Daily Dev Summary — Claude Code Skill Installer ==="

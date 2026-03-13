@@ -22,14 +22,14 @@ Output is saved as a dated Markdown file: `~/dev-summaries/2026-03-13.md`
 ### Option A — One-liner (recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/rapsad/changes_summary_daily_claude_skill/refs/heads/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/rapsad/changes_summary_daily_claude_skill/main/install.sh | bash
 ```
 
 ### Option B — Clone and run locally
 
 ```bash
-git clone https://github.com/rapsad/changes-summary-daily-claude-skill.git
-cd changes-summary-daily-claude-skill
+git clone https://github.com/rapsad/changes_summary_daily_claude_skill.git
+cd changes_summary_daily_claude_skill
 bash install.sh
 ```
 
